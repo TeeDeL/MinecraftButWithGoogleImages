@@ -8,15 +8,21 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
+
 
 import java.io.*;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import org.json.simple.JSONObject;
-
+@Slf4j
 public class FXMLDocController implements Initializable {
 
     @FXML private RadioButton radioButton32;
@@ -46,10 +52,10 @@ public class FXMLDocController implements Initializable {
     private double stepCount = 0;
     private DoubleProperty progressCount;
 
-    private String log = "";
     private String name = "";
     ExecutorService pool = Executors.newFixedThreadPool(6);
     private AppModel model;
+
 
 
     public int getResolution()
@@ -77,18 +83,17 @@ public class FXMLDocController implements Initializable {
 
 
 
-    public void createTPButton()
-    {
-
+    public void createTPButton() throws IOException {
+        getBlockNames(Paths.get("itemLIst.txt"));
+/*
       progressCount.setValue(0);
-        NameMapper doa = new NameMapper();
       maxImages = doa.getNameList().size();
       stepCount = 1/maxImages;
       System.out.println(progressCount);
 
       this.model = new AppModel(tpExtraQuery.getText());
       model.startCreating(getResolution(), getRandomness());
-
+*/
 /*
       for (String as : doa.getNameList()) {
           pool.execute(() ->
@@ -106,21 +111,34 @@ public class FXMLDocController implements Initializable {
 
       }
       */
-
     }
 
-    public void log(String text)
+    public boolean createPackDir(String texturePackName)
     {
-        consoleOut.appendText(text + "\n");
-        log += text + "\n";
+        String packName = texturePackName + "/assets/minecraft/textures/block";
+        File file = new File(packName);
+        return file.mkdirs();
     }
 
+    private ArrayList<String> getBlockNames(Path fileName) throws IOException {
+
+        ArrayList<String> names = new ArrayList<>();
+        try
+        {
+            Files.lines(fileName).forEach(names::add);
+        }
+        catch (IOException e)
+        {
+            log.error("Unable to load in block file" + e.getMessage());
+        }
+
+        return names;
+    }
+
+    //@SneakyThrows
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-
-
-
+        //getBlockNames(Paths.get("itemLIst.txt"));
         //Set up resolution radio buttons and toggle group
         radioButton128.setSelected(true);
         radioButton32.setToggleGroup(tgRes);

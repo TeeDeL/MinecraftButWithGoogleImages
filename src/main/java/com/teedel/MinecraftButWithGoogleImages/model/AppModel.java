@@ -1,5 +1,7 @@
 package com.teedel.MinecraftButWithGoogleImages.model;
 
+import com.teedel.MinecraftButWithGoogleImages.Launch.NameMapper;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -40,6 +42,7 @@ public class AppModel implements Runnable
  */
   public void  startCreating(int dimension, int random)
   {
+    /*
     for (String phrase : nameMapper.getNameList()) {
       pool.execute(() ->
       {
@@ -49,6 +52,8 @@ public class AppModel implements Runnable
         new ImageResizeTool(dimension).resize(new FormatFix().addUnderscore(phrase));
       });
     }
+
+     */
   }
 
   public int getCount()

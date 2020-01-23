@@ -1,5 +1,7 @@
 package com.teedel.MinecraftButWithGoogleImages.tester;
 
+import com.teedel.MinecraftButWithGoogleImages.model.DirectoryCreator;
+
 import java.io.File;
 
 public class TestFeatures
@@ -7,7 +9,16 @@ public class TestFeatures
 
     public static void main(String[] args)
     {
-        showFiles(new File("newname/assets/minecraft/textures/block"));
+        //showFiles(new File("newname/assets/minecraft/textures/block"));
+        testDirCreator("steveTP");
+
+    }
+
+    private static boolean testDirCreator(String texturePackName)
+    {
+        String packName = texturePackName + "/assets/minecraft/textures/block";
+        File file = new File(packName);
+        return file.mkdirs();
     }
 
     private static void showFiles(File node)

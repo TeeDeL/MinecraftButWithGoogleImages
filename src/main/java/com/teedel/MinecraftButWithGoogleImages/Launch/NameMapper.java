@@ -1,12 +1,19 @@
-package com.teedel.MinecraftButWithGoogleImages.model;
+package com.teedel.MinecraftButWithGoogleImages.Launch;
 
 import java.io.File;
 import java.util.ArrayList;
 
 public class NameMapper
 {
+    public static void main(String[] args) {
+        new NameMapper();
+        for (String block : nameList)
+        {
+            System.out.println(block);
+        }
+    }
 
-    private ArrayList<String> nameList;
+    private static ArrayList<String> nameList;
     private File blockPath;
 
     public NameMapper()
