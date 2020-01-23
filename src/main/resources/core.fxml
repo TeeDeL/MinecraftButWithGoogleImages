@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="481.0" stylesheets="style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.teedel.MinecraftButWithGoogleImages.controller.FXMLDocController">
+  <children>
+    <Label id="tpName" layoutX="14.0" layoutY="-1.0" prefHeight="37.0" prefWidth="269.0" text="Program created by TeeDeL">
+      <font>
+        <Font name="Lucida Sans Demibold" size="18.0" />
+      </font>
+    </Label>
+    <Label id="tpName" layoutX="14.0" layoutY="20.0" prefHeight="37.0" prefWidth="269.0" text="Additional Image Query:">
+      <font>
+        <Font name="Lucida Sans Regular" size="18.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Accordion disable="false" expandedPane="$null" layoutX="21.0" layoutY="97.0" pickOnBounds="false" />
+    <TextField fx:id="tpExtraQuery" layoutX="12.0" layoutY="66.0" prefHeight="30.0" prefWidth="243.0" text="" />
+    <Button fx:id="createTexturePackButton" layoutX="23.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#createTPButton" prefHeight="37.0" prefWidth="430.0" text="CrEaTe tEXtuRe PaCK" textAlignment="CENTER" wrapText="true">
+      <font>
+        <Font name="System Bold" size="20.0" />
+      </font>
+    </Button>
+    <TitledPane id="console" fx:id="consoleBanner" animated="false" layoutX="17.0" layoutY="295.0" prefWidth="441.0" text="Console">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <VBox layoutX="0.0" layoutY="0.0" prefHeight="182.0" prefWidth="437.0">
+              <children>
+                <TextArea fx:id="consoleOut" prefHeight="164.0" prefWidth="437.0" wrapText="true" />
+                <ProgressBar fx:id="dlProgressBar" prefHeight="16.0" prefWidth="436.0" progress="0.0" />
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane fx:id="x3" animated="false" collapsible="false" expanded="true" font="$x2" layoutX="299.0" layoutY="7.0" prefHeight="219.0" prefWidth="166.0" text="Resolution">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="188.0" prefWidth="160.0">
+          <children>
+            <VBox layoutX="9.0" layoutY="4.0" prefHeight="149.0" prefWidth="136.0" spacing="3.0">
+              <children>
+                <RadioButton fx:id="radioButton32" mnemonicParsing="false" text="32 x 32">
+                  <font>
+                    <Font size="16.0" fx:id="x2" />
+                  </font>
+                </RadioButton>
+                <RadioButton fx:id="radioButton64" font="$x2" mnemonicParsing="false" text="64 x 64" />
+                <RadioButton fx:id="radioButton128" font="$x2" mnemonicParsing="false" text="128 x 128" />
+                <RadioButton fx:id="radioButton256" font="$x2" mnemonicParsing="false" text="256 x 256" />
+                <RadioButton fx:id="radioButton512" font="$x2" mnemonicParsing="false" text="512 x 512" />
+                <RadioButton fx:id="radioButton1024" font="$x2" mnemonicParsing="false" text="1024 x 1024" />
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <Label id="tpName" layoutX="14.0" layoutY="38.0" prefHeight="37.0" prefWidth="269.0" text="(optional)" textFill="#606060">
+      <font>
+        <Font name="Lucida Sans Regular" size="14.0" />
+      </font>
+    </Label>
+    <TitledPane animated="false" collapsible="false" font="$x2" layoutX="14.0" layoutY="99.0" prefHeight="140.0" prefWidth="270.0" text="Randomness">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="105.0" prefWidth="264.0">
+          <children>
+            <VBox layoutX="3.0" layoutY="0.0" prefHeight="92.0" prefWidth="388.0" spacing="4.0">
+              <children>
+                <RadioButton fx:id="random4" mnemonicParsing="false" prefWidth="264.0" text="Super Random (all results ≈ 80)" />
+                <RadioButton fx:id="random3" mnemonicParsing="false" prefWidth="231.0" text="Semi Random (all results ≈ 20)" />
+                <RadioButton fx:id="random2" mnemonicParsing="false" prefWidth="231.0" text="A Lil Random (all results ≈ 10)" />
+                <RadioButton fx:id="random1" graphicTextGap="4.0" mnemonicParsing="false" prefWidth="293.0" text="Probably Playable (all results ≈ 5)" />
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>

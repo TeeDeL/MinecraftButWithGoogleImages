@@ -1,0 +1,129 @@
+
+
+
+#consoleOut {
+    -fx-font: 12px Consolas;
+}
+
+.text-field {
+    -fx-font: 16px Arial;
+}
+
+.radio-button {
+
+}
+
+
+/*
+.list-view, .split-pane { -fx-background-insets: 0; -fx-padding: 0; }
+.text-field  { -fx-background-insets: 0; -fx-padding: 5; }
+
+
+.red-column.table-cell {
+    -fx-padding: 0.5em;
+    -fx-border-color: transparent -fx-box-border transparent transparent;
+    -fx-font: 13px "Arial";
+    -fx-text-fill: red;
+}
+
+
+
+
+#border {
+    -fx-fill: yellow;
+    -fx-stroke: green;
+    -fx-stroke-width: 5;
+    -fx-stroke-dash-array: 12 2 4 2;
+    -fx-stroke-dash-offset: 6;
+    -fx-stroke-line-cap: butt;
+}
+
+#id {
+    -fx-font: 40px Tahoma;
+    -fx-fill: linear-gradient(from 0% 0% to 50% 400%, repeat, aqua 0%, red 50%);
+    -fx-stroke: black;
+    -fx-stroke-width: 5;
+}
+
+#orderLine {
+	-fx-font: 30px Tahoma;
+    -fx-fill: linear-gradient(from 0% 0% to 50% 400%, repeat, aqua 0%, red 50%);
+    -fx-stroke: black;
+    -fx-stroke-width: 5;
+    -fx-text-alignment: right;
+}
+
+#comOrderLine {
+	-fx-background-color: gray;
+	-fx-font: 30px Tahoma;
+    -fx-fill: linear-gradient(from 0% 0% to 50% 400%, repeat, aqua 0%, red 50%);
+    -fx-stroke: black;
+    -fx-stroke-width: 5;
+    -fx-text-alignment: right;
+    -fx-text-fill: gray;
+    -fx-text-fill: red;
+}
+
+#reciptLabel {
+	-fx-font: 22px Consolas;
+    -fx-stroke: red;
+}
+
+
+#comCash {
+	-fx-font: 40px Tahoma;
+	-fx-text-fill: black;
+}
+#subTotStyle {
+	-fx-border-style: solid inside;
+	-fx-border-width: 5;
+	-fx-border-insets: 1;
+	-fx-border-radius: 1;
+	-fx-border-color: green;
+	-fx-font: 30px Tahoma;
+
+    -fx-stroke: black;
+    -fx-stroke-width: 1;
+}
+#genericButton {
+	-fx-font: 30px Tahoma;
+    -fx-fill: linear-gradient(from 0% 0% to 50% 400%, repeat, aqua 0%, red 50%);
+    -fx-stroke: black;
+    -fx-stroke-width: 5;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+
+}
+
+#genericButton2 {
+	-fx-font: 36px Tahoma;
+    -fx-fill: linear-gradient(from 0% 0% to 50% 400%, repeat, aqua 0%, red 50%);
+    -fx-stroke: black;
+    -fx-stroke-width: 5;
+	-fx-wrap-text: true;
+	-fx-text-alignment: center;
+}
+
+#listViewFormat {
+	-fx-font: 30px Tahoma;
+    -fx-fill: linear-gradient(from 0% 0% to 50% 400%, repeat, aqua 0%, red 50%);
+    -fx-stroke: black;
+    -fx-stroke-width: 5;
+    -fx-text-alignment: right;
+}
+
+#orderLineList {
+	-fx-cell-hover-color: #0093ff;
+	-fx-selection-bar: red;
+	-fx-selection-bar-non-focused: red;
+
+
+}
+#comOrderLineList {
+	-fx-background-color: gray;
+	-fx-selection-bar: gray;
+	-fx-selection-bar-non-focused: gray;
+	-fx-text-fill: blue;
+	-fx-control-inner-background: #ededed;
+}
+*/
