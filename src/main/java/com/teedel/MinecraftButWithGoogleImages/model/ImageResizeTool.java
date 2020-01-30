@@ -1,6 +1,7 @@
 package com.teedel.MinecraftButWithGoogleImages.model;
 
 import javafx.scene.control.TextArea;
+import lombok.extern.slf4j.Slf4j;
 
 import java.awt.AlphaComposite;
 import java.awt.Graphics2D;
@@ -14,6 +15,7 @@ import javax.imageio.ImageIO;
  * @author mkyong
  * modified by TeeDeL (Josh Swift)
  */
+@Slf4j
 public class ImageResizeTool {
 
     private int IMG_DIMENSIONS;
@@ -25,21 +27,21 @@ public class ImageResizeTool {
         done = false;
     }
 
-    public void resize(String name)
+    public void resize(String name, String filePath)
     {
         try {
 
-            BufferedImage originalImage = ImageIO.read(new File("C:\\newname\\assets\\minecraft\\textures\\block\\" + name + ".png"));
+            BufferedImage originalImage = ImageIO.read(new File(filePath +"/" +  name + ".png"));
             //TODO This can fail
             //int type = originalImage.getType() == 0 ? BufferedImage.TYPE_INT_ARGB : originalImage.getType();
 
             BufferedImage resizeImage = resizeImage(originalImage);
-            ImageIO.write(resizeImage, "png", new File("C:\\newname\\assets\\minecraft\\textures\\block\\" + name + ".png"));
+            ImageIO.write(resizeImage, "png", new File(filePath + "/" + name + ".png"));
             done = true;
 
         } catch (IOException e) {
-            System.err.println("Failed to resize " + name);
-            e.printStackTrace();
+            log.error("Failed to resize " + name + ": " + e.getMessage());
+            //e.printStackTrace();
         }
     }
 

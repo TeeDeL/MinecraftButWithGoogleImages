@@ -1,0 +1,10 @@
+stone
+grass
+dirt
+cobblestone
+pizza
+chips
+glass
+space
+donkey
+chicken

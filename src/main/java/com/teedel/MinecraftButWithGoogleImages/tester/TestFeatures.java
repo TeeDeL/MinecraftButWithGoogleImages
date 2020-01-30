@@ -1,7 +1,5 @@
 package com.teedel.MinecraftButWithGoogleImages.tester;
 
-import com.teedel.MinecraftButWithGoogleImages.model.DirectoryCreator;
-
 import java.io.File;
 
 public class TestFeatures

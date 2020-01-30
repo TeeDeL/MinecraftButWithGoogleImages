@@ -1,6 +1,7 @@
 package com.teedel.MinecraftButWithGoogleImages.model;
 
 import javafx.scene.control.TextArea;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.Random;
 
+@Slf4j
 public class DownloadHelper {
 
     private static String IMAGE_DESTINATION_FOLDER;
@@ -17,11 +19,11 @@ public class DownloadHelper {
     private List<String> resultUrls;
     private String chosenUrl;
 
-    public DownloadHelper(List<String> resultUrls)
+    public DownloadHelper(List<String> resultUrls, String path)
     {
         this.resultUrls = resultUrls;
         chosenUrl = "";
-        IMAGE_DESTINATION_FOLDER = "C:\\newname\\assets\\minecraft\\textures\\block";
+        IMAGE_DESTINATION_FOLDER = path;
         failedDownloadCount = 0;
     }
 
@@ -30,23 +32,23 @@ public class DownloadHelper {
         FormatFix ff = new FormatFix();
         //TODO This can produce -1
         int chosenNum = (rng(0, resultUrls.size()) - 1)/randomness;
-        System.out.println("RanNum:" + chosenNum  + " UrlList.Size:" + resultUrls.size() + "\tImageName:" + outName);
+        //System.out.println("RanNum:" + chosenNum  + " UrlList.Size:" + resultUrls.size() + "\tImageName:" + outName);
         if (chosenNum == 0 && resultUrls.size() == 0)
         {
             for (String link : resultUrls)
             {
-                System.out.println(link);
+                //System.out.println(link);
             }
         }
         else
         {
             chosenUrl = resultUrls.get(chosenNum);
         }
-        //log.appendText("Downloading: " + outName + "\n");
+        log.info("Downloading: " + outName);
         //get file name from image path
         String strImageName = chosenUrl.substring(chosenUrl.lastIndexOf("/") + 1);
 
-        //log.appendText("Saving: " + strImageName + ", from: " + chosenUrl + "\n");
+        log.info("Saving: " + strImageName + ", from: " + chosenUrl);
 
         try {
 
