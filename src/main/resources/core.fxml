@@ -7,26 +7,26 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="481.0" stylesheets="style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.teedel.MinecraftButWithGoogleImages.controller.FXMLDocController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="481.0" stylesheets="style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.teedel.MinecraftButWithGoogleImages.controller.FXMLDocController">
   <children>
-    <Label id="tpName" layoutX="14.0" layoutY="-1.0" prefHeight="37.0" prefWidth="269.0" text="Program created by TeeDeL">
+    <Label id="programCratedByLabel" layoutX="287.0" layoutY="0.0" prefHeight="37.0" prefWidth="190.0" text="Program by TeeDeL">
       <font>
         <Font name="Lucida Sans Demibold" size="18.0" />
       </font>
     </Label>
-    <Label id="tpName" layoutX="14.0" layoutY="20.0" prefHeight="37.0" prefWidth="269.0" text="Additional Image Query:">
+    <Label id="additionalImageLabel" layoutX="14.0" layoutY="56.0" prefHeight="37.0" prefWidth="269.0" text="Additional Image Query:">
       <font>
         <Font name="Lucida Sans Regular" size="18.0" fx:id="x1" />
       </font>
     </Label>
     <Accordion disable="false" expandedPane="$null" layoutX="21.0" layoutY="97.0" pickOnBounds="false" />
-    <TextField fx:id="tpExtraQuery" layoutX="12.0" layoutY="66.0" prefHeight="30.0" prefWidth="243.0" text="" />
-    <Button fx:id="createTexturePackButton" layoutX="23.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#createTPButton" prefHeight="37.0" prefWidth="430.0" text="CrEaTe tEXtuRe PaCK" textAlignment="CENTER" wrapText="true">
+    <TextField fx:id="tpExtraQuery" layoutX="12.0" layoutY="102.0" prefHeight="30.0" prefWidth="243.0" text="" />
+    <Button fx:id="createTexturePackButton" layoutX="23.0" layoutY="283.0" mnemonicParsing="false" onMouseClicked="#createTPButton" prefHeight="37.0" prefWidth="430.0" text="CrEaTe tEXtuRe PaCK" textAlignment="CENTER" wrapText="true">
       <font>
         <Font name="System Bold" size="20.0" />
       </font>
     </Button>
-    <TitledPane id="console" fx:id="consoleBanner" animated="false" layoutX="17.0" layoutY="295.0" prefWidth="441.0" text="Console">
+    <TitledPane id="console" fx:id="consoleBanner" animated="false" layoutX="17.0" layoutY="331.0" prefWidth="441.0" text="Console">
       <content>
         <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
           <children>
@@ -40,7 +40,7 @@
         </AnchorPane>
       </content>
     </TitledPane>
-    <TitledPane fx:id="x3" animated="false" collapsible="false" expanded="true" font="$x2" layoutX="299.0" layoutY="7.0" prefHeight="219.0" prefWidth="166.0" text="Resolution">
+    <TitledPane fx:id="x3" animated="false" collapsible="false" expanded="true" font="$x2" layoutX="299.0" layoutY="43.0" prefHeight="219.0" prefWidth="166.0" text="Resolution">
       <content>
         <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="188.0" prefWidth="160.0">
           <children>
@@ -62,12 +62,12 @@
         </AnchorPane>
       </content>
     </TitledPane>
-    <Label id="tpName" layoutX="14.0" layoutY="38.0" prefHeight="37.0" prefWidth="269.0" text="(optional)" textFill="#606060">
+    <Label id="tpName" layoutX="14.0" layoutY="74.0" prefHeight="37.0" prefWidth="269.0" text="(optional)" textFill="#606060">
       <font>
         <Font name="Lucida Sans Regular" size="14.0" />
       </font>
     </Label>
-    <TitledPane animated="false" collapsible="false" font="$x2" layoutX="14.0" layoutY="99.0" prefHeight="140.0" prefWidth="270.0" text="Randomness">
+    <TitledPane animated="false" collapsible="false" font="$x2" layoutX="14.0" layoutY="135.0" prefHeight="140.0" prefWidth="270.0" text="Randomness">
       <content>
         <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="105.0" prefWidth="264.0">
           <children>
@@ -83,5 +83,7 @@
         </AnchorPane>
       </content>
     </TitledPane>
+    <TextField fx:id="tpName" layoutX="14.0" layoutY="30.0" prefHeight="30.0" prefWidth="243.0" text="" />
+    <Label id="additionalImageLabel" font="$x1" layoutX="12.0" layoutY="-1.0" prefHeight="37.0" prefWidth="269.0" text="Texture Pack Name:" />
   </children>
 </AnchorPane>

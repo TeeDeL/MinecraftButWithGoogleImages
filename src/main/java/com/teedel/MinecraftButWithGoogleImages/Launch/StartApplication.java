@@ -27,6 +27,7 @@ public class StartApplication extends Application {
         }
         Scene scene = new Scene(root);
 
+        primaryStage.setTitle("Minecraft but with Google images");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
